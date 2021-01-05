@@ -1,0 +1,5 @@
+name: Seichi915ProxyCore
+version: 1.0.0
+main: net.seichi915.seichi915proxycore.Seichi915ProxyCore
+description: "seichi915Proxy コアプラグイン"
+author: stouma915
