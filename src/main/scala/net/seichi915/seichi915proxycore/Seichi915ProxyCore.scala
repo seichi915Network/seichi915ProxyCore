@@ -1,6 +1,7 @@
 package net.seichi915.seichi915proxycore
 
 import net.md_5.bungee.api.plugin.Plugin
+import net.seichi915.seichi915proxycore.command._
 import net.seichi915.seichi915proxycore.listener._
 
 object Seichi915ProxyCore {
@@ -15,6 +16,9 @@ class Seichi915ProxyCore extends Plugin {
       new ChatListener,
       new PostLoginListener
     ).foreach(getProxy.getPluginManager.registerListener(this, _))
+    Seq(
+      new HubCommand
+    ).foreach(getProxy.getPluginManager.registerCommand(this, _))
 
     getLogger.info("seichi915ProxyCoreが有効になりました。")
   }
